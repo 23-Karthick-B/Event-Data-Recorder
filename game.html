@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Car Driving Simulator with Blackbox Logger</title>
+  <link rel="stylesheet" href="./css/homePage.css">
+  <link rel="stylesheet" href="./css/control.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+  <canvas id="gameCanvas" width="1000" height="700"></canvas>
+  <canvas id="minimap" width="150" height="200"></canvas>
+
+  <div id="ui">
+    <div>Speed: <span id="speedDisplay">0</span> km/h</div>
+    <div>Score: <span id="scoreDisplay">0</span></div>
+    <div>Distance: <span id="distanceDisplay">0</span> m</div>
+    <div>Logs: <span id="logsDisplay">0</span></div>
+    <div>Steering Angle: <span id="steerDisplay">0</span>°</div>
+  </div>
+
+  <div class="indicator" id="leftIndicator"></div>
+  <div class="indicator" id="rightIndicator"></div>
+
+  <div id="speedometer">
+    <div id="speedNeedle"></div>
+    <div id="speedText">0<span id="speedUnit">km/h</span></div>
+  </div>
+
+  <div id="controls">
+    <div><span class="key">W/↑</span> Accelerate</div>
+    <div><span class="key">S/↓</span> Brake</div>
+    <div><span class="key">A/←</span> Steer Left</div>
+    <div><span class="key">D/→</span> Steer Right</div>
+    <div><span class="key">Q</span> Left Indicator</div>
+    <div><span class="key">E</span> Right Indicator</div>
+  </div>
+
+  <div id="startScreen">
+    <h1>Driving Simulator</h1>
+    <p>A driving simulator for collecting comprehensive blackbox data!</p>
+    <div class="controls-info">
+      <h3>🎮 Controls:</h3>
+      <p><strong>Driving:</strong> W/↑ Accelerate • S/↓ Brake • A/← D/→ Steer</p>
+      <p><strong>Indicators:</strong> Q = Left Indicator • E = Right Indicator</p>
+    </div>
+    <p>Navigate through traffic and avoid hinderances!!</p>
+    <button id="startBtn">START GAME</button>
+  </div>
+
+  <div id="crashScreen">
+    <h1>Crash Detected!</h1>
+    <p style="color: white; font-size: 24px; margin: 20px;">Final Score: <span id="finalScore">0</span></p>
+    <p style="color: white; font-size: 20px; margin: 10px;">Distance: <span id="finalDistance">0</span> m</p>
+    <p style="color: white; font-size: 18px; margin: 10px;">Blackbox Logs: <span id="finalLogs">0</span></p>
+    <button id="restartBtn">TRY AGAIN</button>
+    <button id="downloadBtn">DOWNLOAD BLACKBOX DATA</button>
+  </div>
+
+  <script src="./js/car.js"></script>
+  <script src="./js/obstacles.js"></script>
+  <script src="./js/logEvents.js"></script>
+  <script src="./js/road.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/script.js"></script>
+
+</body>
+
+</html>

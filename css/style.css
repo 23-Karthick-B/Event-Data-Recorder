@@ -1,0 +1,73 @@
+#startBtn,
+#downloadBtn,
+#restartBtn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 18px 45px;
+  font-size: 22px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+#startBtn:hover,
+#downloadBtn:hover,
+#restartBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+#downloadBtn {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 15px 35px;
+  font-size: 18px;
+}
+
+#crashScreen {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(139, 0, 0, 0.92);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#crashScreen h1 {
+  color: white;
+  font-size: 72px;
+  margin-bottom: 20px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+#minimap {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 150px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  z-index: 10;
+}

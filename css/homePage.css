@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#gameCanvas {
+  display: block;
+  background: linear-gradient(to bottom, #87CEEB 0%, #98D8E8 50%, #7A9F8F 50%, #5F8575 100%);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+#ui {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 16px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+#ui div {
+  margin: 6px 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 12px;
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#speedometer {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95));
+  border-radius: 50%;
+  border: 5px solid #333;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+#speedNeedle {
+  position: absolute;
+  width: 4px;
+  height: 70px;
+  background: linear-gradient(to top, #ff3333, #ff6666);
+  top: 90px;
+  left: 88px;
+  transform-origin: 2px 0px;
+  transition: transform 0.1s ease-out;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(255, 51, 51, 0.8);
+}
+
+#speedText {
+  position: absolute;
+  bottom: 35px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#speedUnit {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.indicator {
+  position: absolute;
+  top: 30px;
+  width: 30px;
+  height: 30px;
+  background: rgba(50, 50, 50, 0.8);
+  border-radius: 50%;
+  border: 2px solid #555;
+  transition: all 0.2s;
+}
+
+.indicator.active {
+  background: #ffa500;
+  box-shadow: 0 0 20px #ffa500;
+}
